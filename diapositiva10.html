@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      .slide-container {
+        width: 100vw;
+        height: 100vh;
+        background: #005240;
+        color: #FFFFFF;
+        font-family: 'SF Pro Display', sans-serif;
+      }
+      .title {
+        font-family: 'Merriweather', serif;
+        font-size: 36px;
+        color: #DDA36C;
+        font-weight: 700;
+      }
+      .content-text {
+        font-family: 'SF Pro Display', sans-serif;
+        font-size: 24px;
+        color: #FFFFFF;
+        line-height: 1.6;
+      }
+      .highlight {
+        color: #DDA36C;
+        font-weight: 500;
+      }
+      .feature-box {
+        background-color: rgba(221, 163, 108, 0.1);
+        border-left: 4px solid #DDA36C;
+        padding: 16px;
+        margin-bottom: 20px;
+        border-radius: 0 8px 8px 0;
+      }
+      .feature-title {
+        font-weight: 600;
+        font-size: 22px;
+        color: #DDA36C;
+        margin-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container p-16">
+      <h1 class="title mb-8">Módulo 4: Tu Proyecto de Portafolio</h1>
+      
+      <div class="flex flex-row">
+        <div class="w-1/2 pr-8">
+          <div class="content-text">
+            <div class="feature-box">
+              <p class="feature-title">Desarrollo de una solución inteligente</p>
+              <p class="text-base">Crea un proyecto de punta a punta que integre las habilidades adquiridas en los módulos anteriores:</p>
+              <ul class="list-disc pl-6 mt-2 text-base">
+                <li>Negociación de requisitos</li>
+                <li>Implementación de modelos de ML</li>
+                <li>Desarrollo asistido por IA</li>
+              </ul>
+            </div>
+            
+            <div class="feature-box">
+              <p class="feature-title">¡Demo Day!</p>
+              <p class="text-base">Presenta tu proyecto ante compañeros, demostrando tu dominio de las tecnologías y metodologías aprendidas.</p>
+            </div>
+            
+            <p class="mt-6 text-base">Este proyecto será la pieza central de tu portafolio profesional, demostrando tu capacidad para crear soluciones inteligentes en el mundo real.</p>
+          </div>
+        </div>
+        
+        <div class="w-1/2 flex justify-center items-center">
+          <img src="imagen1.jpg" alt="Proyecto de Portafolio" class="rounded-lg shadow-lg max-h-96">
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-8 w-full flex justify-between px-8">
+      <a href="diapositiva9.html" class="text-white text-2xl"><i class="fas fa-arrow-left"></i></a>
+      <a href="diapositiva11.html" class="text-white text-2xl"><i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <script>
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+          window.location.href = 'diapositiva9.html';
+        } else if (event.key === 'ArrowRight') {
+          window.location.href = 'diapositiva11.html';
+        }
+      });
+    </script>
+  </body>
+</html>

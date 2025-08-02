@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
+      .slide-container {
+        width: 100vw;
+        height: 100vh;
+        background: #005240;
+        color: #FFFFFF;
+        font-family: 'SF Pro Display', sans-serif;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem; /* Add some padding back for content */
+      }
+      .title {
+        font-family: 'Merriweather', serif;
+        font-size: 36px;
+        color: #DDA36C;
+        font-weight: 700;
+      }
+      .content-text {
+        font-family: 'SF Pro Display', sans-serif;
+        font-size: 24px;
+        color: #FFFFFF;
+        line-height: 1.6;
+      }
+      .highlight {
+        color: #DDA36C;
+        font-weight: 500;
+      }
+      .question {
+        font-size: 28px;
+        margin-bottom: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <h1 class="title mb-8 text-center">!ahora ustedes¡</h1>
+      
+      <div class="flex flex-row w-full max-w-6xl mx-auto">
+        <!-- Columna de texto -->
+        <div class="w-1/2 pr-8">
+          <div class="content-text">
+            <ul class="space-y-8">
+              <li class="flex items-center">
+                <i class="fas fa-code fa-2x mr-6 text-green-300"></i>
+                <div>
+                  <p class="highlight">Tu API Pública:</p>
+                  <p>¿Tu nombre y un dato curioso o hobby que los demás no sepan?</p>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-server fa-2x mr-6 text-blue-300"></i>
+                <div>
+                  <p class="highlight">Tu Backend Actual:</p>
+                  <p>¿Cuál es tu lenguaje o tecnología principal en este momento? (Python, Java, React, etc.)</p>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-arrow-alt-circle-up fa-2x mr-6 text-yellow-300"></i>
+                <div>
+                  <p class="highlight">Tu Próximo "Upgrade":</p>
+                  <p>¿Qué "nueva librería o feature" (habilidad) quieres instalarte con esta materia?</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Columna de imagen -->
+        <div class="w-1/2 flex justify-center items-center">
+         <img src="https://private-us-east-1.manuscdn.com/sessionFile/ipFZvU7jHUPZtxtbHlVcfv/sandbox/slides_resource_iy8iwsht4ts2qi7vuf2hs-2c3c3258-e2b-prod-aws_1754107852928_na1fn_L2hvbWUvdWJ1bnR1L3ByZXNlbnRhY2lvbl9zb2Z0d2FyZV9pbnRlbGlnZW50ZS9pbWFnZW5lcy9mMFl1TDh1WlZMYW0.jpg?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvaXBGWnZVN2pIVVBadHh0YkhsVmNmdi9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9peThpd3NodDR0czJxaTd2dWYyaHMtMmMzYzMyNTgtZTJiLXByb2QtYXdzXzE3NTQxMDc4NTI5MjhfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzQnlaWE5sYm5SaFkybHZibDl6YjJaMGQyRnlaVjlwYm5SbGJHbG5aVzUwWlM5cGJXRm5aVzVsY3k5bU1GbDFURGgxV2xaTVlXMC5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xNTYwLGhfMTU2MC9mb3JtYXQsd2VicCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=sUwXqxgWXu2mSxMDVExXmGOXnZHgXAYY1YPmLxPlV7h6iPxk4WJG~HcFSmuBdX~jRKQGRlPFcDSli~5BIGJy6RPEuJ1JkDV5MPxdGlUw5jGebDeh6BH3~ThI7Ge3XFMsVinyxgbNRulDKNZNcriA-MkJqWnGO5LCgiiB2j2PGcZ29ysukX-HXfu-6jxbpQxYXxW0S5fXJJiPyO6ycR1Az68JZu3owpO4rgH0JH0cd63hbBliU3vEJoIrlRp5Fsfpru7Se51QP5sHsAF5u8OrBP6ba-dYmB3OMNSQ9Yh5-REoaufSoEgyiLYJYm9gE0RzeD8IydTGLVs3jTefdFiSpQ__" alt="Colaboración y trabajo en equipo" class="rounded-lg shadow-lg" style="height: 400px; width: auto; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-8 w-full flex justify-between px-8">
+      <a href="diapositiva4.html" class="text-white text-2xl"><i class="fas fa-arrow-left"></i></a>
+      <a href="diapositivas6.html" class="text-white text-2xl"><i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <script>
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+          window.location.href = 'diapositiva4.html';
+        } else if (event.key === 'ArrowRight') {
+          window.location.href = 'diapositivas6.html';
+        }
+      });
+    </script>
+  </body>
+</html>

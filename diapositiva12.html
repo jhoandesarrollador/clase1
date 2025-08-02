@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+      }
+      .slide-container {
+        width: 100%;
+        height: 100%;
+        background: #005240;
+        color: #FFFFFF;
+        font-family: 'SF Pro Display', sans-serif;
+        overflow: hidden;
+        position: relative;
+      }
+      .title {
+        font-family: 'Merriweather', serif;
+        font-size: 72px;
+        color: #DDA36C;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      .contact {
+        font-family: 'SF Pro Display', sans-serif;
+        font-size: 24px;
+        color: #FFFFFF;
+        margin-top: 40px;
+      }
+      .highlight {
+        color: #DDA36C;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container flex flex-col justify-center items-center">
+      <div class="flex flex-col items-center justify-center text-center">
+        <img src="Imagenes De Signos De Interrogacion Animados, HD Png Download(1807x2400) - PngFind.jpeg" alt="Signo de interrogación" class="mb-10" style="height: 200px; width: auto;">
+        <h1 class="title mb-6">¿Preguntas?</h1>
+      </div>
+    </div>
+    <div class="absolute bottom-8 w-full flex justify-between px-8">
+      <a href="diapositiva11.html" class="text-white text-2xl"><i class="fas fa-arrow-left"></i></a>
+      <a href="diapositiva1.html" class="text-white text-2xl"><i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <script>
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+          window.location.href = 'diapositiva11.html';
+        } else if (event.key === 'ArrowRight') {
+          window.location.href = 'diapositiva1.html';
+        }
+      });
+    </script>
+  </body>
+</html>

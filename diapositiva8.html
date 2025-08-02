@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      .slide-container {
+        width: 100vw;
+        height: 100vh;
+        background: #005240;
+        color: #FFFFFF;
+        font-family: 'SF Pro Display', sans-serif;
+      }
+      .title {
+        font-family: 'Merriweather', serif;
+        font-size: 48px;
+        color: #DDA36C;
+        font-weight: 700;
+      }
+      .content-text {
+        font-family: 'SF Pro Display', sans-serif;
+        font-size: 28px;
+        color: #FFFFFF;
+        line-height: 1.6;
+      }
+      .highlight {
+        color: #DDA36C;
+        font-weight: 500;
+      }
+      .icon {
+        color: #DDA36C;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container p-16">
+      <h1 class="title mb-8">Módulo 2: Desmitificando el Machine Learning</h1>
+      
+      <div class="flex flex-row">
+        <div class="w-1/2 pr-8">
+          <div class="content-text space-y-8">
+            <div class="flex items-start">
+              <i class="fas fa-chart-line icon text-2xl mt-1"></i>
+              <div>
+                <p class="highlight text-2xl">Modelos Predictivos</p>
+                <p class="text-lg">Regresión y Clasificación: técnicas para predecir valores numéricos y categorías basadas en datos históricos.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <i class="fas fa-object-group icon text-2xl mt-1"></i>
+              <div>
+                <p class="highlight text-2xl">Modelos de Agrupamiento</p>
+                <p class="text-lg">Clustering: descubre patrones y segmentos naturales en tus datos sin etiquetas previas.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <i class="fas fa-code icon text-2xl mt-1"></i>
+              <div>
+                <p class="highlight text-2xl">De la teoría a una API real</p>
+                <p class="text-lg">Implementación práctica de modelos en entornos de producción mediante APIs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="w-1/2 flex justify-center items-center">
+          <img src="https://private-us-east-1.manuscdn.com/sessionFile/ipFZvU7jHUPZtxtbHlVcfv/sandbox/slides_resource_iy8iwsht4ts2qi7vuf2hs-2c3c3258-e2b-prod-aws_1754107855279_na1fn_L2hvbWUvdWJ1bnR1L3ByZXNlbnRhY2lvbl9zb2Z0d2FyZV9pbnRlbGlnZW50ZS9pbWFnZW5lcy9mdm54OTdWY1NzNkY.jpg?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvaXBGWnZVN2pIVVBadHh0YkhsVmNmdi9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9peThpd3NodDR0czJxaTd2dWYyaHMtMmMzYzMyNTgtZTJiLXByb2QtYXdzXzE3NTQxMDc4NTUyNzlfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzQnlaWE5sYm5SaFkybHZibDl6YjJaMGQyRnlaVjlwYm5SbGJHbG5aVzUwWlM5cGJXRm5aVzVsY3k5bWRtNTRPVGRXWTFOek5rWS5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xNTYwLGhfMTU2MC9mb3JtYXQsd2VicCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=JqIZjv4c2ZSMzWEG3SblWJpNCCTzCAkDIkHsndcgS8r7OJsmeU2H-uq8194C0YbCeWITmgm05HWDJRZ2wlQZgjfgNZOkZ6XHfFPMis4ZnPV0i5rO0r9n99fLwD2GITjdu4tidFWOxL4mtXG-J3CU0fYyU65QezyZyUe4tI0DuAqqdZHKz7Q9AqgwNDnXk4Ddwjrd7nSTxalut0GR2rfcjCyU2smbp7d1xDHrYa5UvBh92qG8sEmCvBz99nG1fVhnyMvK~zdbLjXv5yNa8ifSTSQx53Zb0hzDzOXVcfVqJQRptStGq734uElKjbiq4Xmie7A5BDZTLLL5nMwapQ~nEg__" alt="Programación tradicional vs Machine Learning" class="rounded-lg shadow-lg" style="height: 400px; width: auto; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-8 w-full flex justify-between px-8">
+      <a href="diapositiva7.html" class="text-white text-2xl"><i class="fas fa-arrow-left"></i></a>
+      <a href="diapositiva9.html" class="text-white text-2xl"><i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <script>
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+          window.location.href = 'diapositiva7.html';
+        } else if (event.key === 'ArrowRight') {
+          window.location.href = 'diapositiva9.html';
+        }
+      });
+    </script>
+  </body>
+</html>

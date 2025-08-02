@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      .slide-container {
+        width: 100%;
+        min-height: 100%;
+        background: #005240;
+        color: #FFFFFF;
+        font-family: 'SF Pro Display', sans-serif;
+        overflow: hidden;
+      }
+      .title {
+        font-family: 'Merriweather', serif;
+        font-size: 36px;
+        color: #DDA36C;
+        font-weight: 700;
+      }
+      .content-text {
+        font-family: 'SF Pro Display', sans-serif;
+        font-size: 24px;
+        color: #FFFFFF;
+        line-height: 1.6;
+      }
+      .highlight {
+        color: #DDA36C;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container p-16">
+    <h1 class="title mb-8 text-center">Un poco sobre mí</h1>
+      
+      <div class="flex flex-row">
+        <div class="w-1/2 pr-8">
+          <div class="content-text space-y-6">
+            <p class="text-2xl font-semibold highlight"> Mi nombre es: jhoan sebastian</p>
+            <p>Tecnico en desarrollo de software </p>
+            <p> tengo 3  años de experiencia en desarrollo de software</p>
+            <p class="mt-8">Apasionado por la union entre el código y la inteligencia artificial.</p>
+            <p class="text-sm italic mt-12">Nota: siempre debes de saber los fundamentos de el desarrollo para no quedar asi.</p>
+            <img src="meme 1.png" alt="Meme sobre desarrollo" class="mt-4 rounded-lg shadow-lg w-3/4 mx-auto">
+          </div>
+        </div>
+        
+        <div class="w-1/2 flex justify-center items-center">
+          <img src="https://private-us-east-1.manuscdn.com/sessionFile/ipFZvU7jHUPZtxtbHlVcfv/sandbox/slides_resource_iy8iwsht4ts2qi7vuf2hs-2c3c3258-e2b-prod-aws_1754107804356_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9zZWFyY2hfaW1hZ2VzL3N5MnVkUG1jT3FyMw.jpg?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvaXBGWnZVN2pIVVBadHh0YkhsVmNmdi9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9peThpd3NodDR0czJxaTd2dWYyaHMtMmMzYzMyNTgtZTJiLXByb2QtYXdzXzE3NTQxMDc4MDQzNTZfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5elpXRnlZMmhmYVcxaFoyVnpMM041TW5Wa1VHMWpUM0Z5TXcuanBnP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTU2MCxoXzE1NjAvZm9ybWF0LHdlYnAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Ns~zqCLAlED1SaSZ6hpnnxE2lBxSux~19aXZTaS4hSjzjTtDI0JJjJGjZ08vSNAJ-vFiv0NRHaH7NLLBoR3kJU7WnbPqIIhQGlzSwiW-4KY5mNzR3s4JF~U9WVbPkMMjmoEd-VU1b1ITrgTSOZeb59rU6bU9stbsBwaQjm9~Vm~orREaRe-SbO1O0dhcod8Ezw6VVaTwyLiq2HS-WJh64UABcbwHB9sgFbPKNEyXqGXLN57-2HkOWHNnvfTjt-ZrShFp10g-bHpYBNOmfVG-84Q~jvtvn7XpGfH86bzC~JSOe2qhkEloLAzOpmdI5iyM9xt5BbE4cbRVxwNVSY10ug__" alt="Profesional de tecnología" class="rounded-lg shadow-lg" style="height: 400px; width: auto; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-8 w-full flex justify-between px-8">
+      <a href="diapositiva1.html" class="text-white text-2xl"><i class="fas fa-arrow-left"></i></a>
+      <a href="diapositiva3.html" class="text-white text-2xl"><i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <script>
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+          window.location.href = 'diapositiva1.html';
+        } else if (event.key === 'ArrowRight') {
+          window.location.href = 'diapositiva3.html';
+        }
+      });
+    </script>
+  </body>
+</html>

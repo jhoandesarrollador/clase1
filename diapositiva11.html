@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .slide-container {
+        width: 100%;
+        height: 100%;
+        background: #005240;
+        color: #FFFFFF;
+        font-family: 'SF Pro Display', sans-serif;
+      }
+      .title {
+        font-family: 'Merriweather', serif;
+        font-size: 36px;
+        color: #DDA36C;
+        font-weight: 700;
+      }
+      .content-text {
+        font-family: 'SF Pro Display', sans-serif;
+        font-size: 24px;
+        color: #FFFFFF;
+        line-height: 1.6;
+      }
+      .highlight {
+        color: #DDA36C;
+        font-weight: 500;
+      }
+      .quote {
+        font-style: italic;
+        border-left: 4px solid #DDA36C;
+        padding-left: 16px;
+        margin: 20px 0;
+      }
+      .step {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+      }
+      .step-number {
+        background-color: #DDA36C;
+        color: #005240;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        margin-right: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container p-16">
+      <h1 class="title mb-8">El Enemigo Silencioso: Scope Creep</h1>
+      
+      <div class="flex flex-row">
+        <div class="w-1/2 pr-8">
+          <div class="content-text space-y-6">
+            <p class="quote">"El arte de que un proyecto crezca sin control hasta devorarlo todo."</p>
+            
+            <p>El <span class="highlight">Scope Creep</span> ocurre cuando el alcance de un proyecto aumenta gradualmente sin:</p>
+            
+            <div class="space-y-4 mt-4">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div>Control adecuado de cambios</div>
+              </div>
+              
+              <div class="step">
+                <div class="step-number">2</div>
+                <div>Ajustes en tiempo y recursos</div>
+              </div>
+              
+              <div class="step">
+                <div class="step-number">3</div>
+                <div>Aprobaciones formales</div>
+              </div>
+            </div>
+            
+            <p class="mt-6">Consecuencias: retrasos, sobrecostos, agotamiento del equipo y potencial fracaso del proyecto.</p>
+          </div>
+        </div>
+        
+        <div class="w-1/2 flex justify-center items-center">
+          <img src="scope.png" alt="Scope Creep Illustration" class="rounded-lg shadow-lg max-h-96">
+        </div>
+      </div>
+    </div>
+  <a href="diapositiva10.html" class="absolute bottom-8 left-8 text-white text-2xl"><i class="fas fa-arrow-left"></i></a>
+    <a href="diapositiva12.html" class="absolute bottom-8 right-8 text-white text-2xl"><i class="fas fa-arrow-right"></i></a>
+
+    <script>
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+          window.location.href = 'diapositiva10.html';
+        } else if (event.key === 'ArrowRight') {
+          window.location.href = 'diapositiva12.html';
+        }
+      });
+    </script>
+  </body>
+</html>

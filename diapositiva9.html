@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      .slide-container {
+        width: 100%;
+        min-height: 100vh;
+        background: #005240;
+        color: #FFFFFF;
+        font-family: 'SF Pro Display', sans-serif;
+        padding: 4rem;
+      }
+      .title {
+        font-family: 'Merriweather', serif;
+        font-size: 36px;
+        color: #DDA36C;
+        font-weight: 700;
+      }
+      .content-text {
+        font-family: 'SF Pro Display', sans-serif;
+        font-size: 24px;
+        color: #FFFFFF;
+        line-height: 1.6;
+      }
+      .highlight {
+        color: #DDA36C;
+        font-weight: 500;
+      }
+      .icon {
+        color: #DDA36C;
+        margin-right: 10px;
+      }
+      .feature-box {
+        margin-bottom: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container p-16">
+      <h1 class="title text-center mb-12">Módulo 3: Programación Aumentada</h1>
+      
+      <div class="flex flex-row items-center">
+        <div class="w-3/5 pr-12">
+          <div class="content-text">
+            <div class="feature-box flex items-start">
+              <i class="fas fa-robot icon text-3xl mt-1"></i>
+              <div>
+                <p class="highlight text-xl mb-1">Tu Copiloto IA</p>
+                <p class="text-base">Aprende a utilizar GitHub Copilot y otras herramientas de asistencia de código para potenciar tu desarrollo.</p>
+              </div>
+            </div>
+            
+            <div class="feature-box flex items-start">
+              <i class="fas fa-comment-alt-code icon text-3xl mt-1"></i>
+              <div>
+                <p class="highlight text-xl mb-1">El arte del "Prompt Engineering" para código</p>
+                <p class="text-base">Domina técnicas para comunicarte efectivamente con asistentes de IA y obtener exactamente el código que necesitas.</p>
+              </div>
+            </div>
+            
+            <div class="feature-box flex items-start">
+              <i class="fas fa-bolt icon text-3xl mt-1"></i>
+              <div>
+                <p class="highlight text-xl mb-1">Desarrollo 10x más rápido</p>
+                <p class="text-base">Implementa flujos de trabajo que combinan tu experiencia con la potencia de la IA para multiplicar tu productividad.</p>
+              </div>
+            </div>
+            
+            <p class="mt-8 text-base italic">Este módulo transformará tu forma de programar, permitiéndote enfocarte en la resolución de problemas mientras la IA se encarga del código repetitivo.</p>
+          </div>
+        </div>
+        
+        <div class="w-2/5 flex justify-center items-center">
+          <img src="https://private-us-east-1.manuscdn.com/sessionFile/ipFZvU7jHUPZtxtbHlVcfv/sandbox/slides_resource_iy8iwsht4ts2qi7vuf2hs-2c3c3258-e2b-prod-aws_1754107882310_na1fn_L2hvbWUvdWJ1bnR1L3ByZXNlbnRhY2lvbl9zb2Z0d2FyZV9pbnRlbGlnZW50ZS9pbWFnZW5lcy80WVU5MTFzT1hzdVE.jpg?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvaXBGWnZVN2pIVVBadHh0YkhsVmNmdi9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9peThpd3NodDR0czJxaTd2dWYyaHMtMmMzYzMyNTgtZTJiLXByb2QtYXdzXzE3NTQxMDc4ODIzMTBfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzQnlaWE5sYm5SaFkybHZibDl6YjJaMGQyRnlaVjlwYm5SbGJHbG5aVzUwWlM5cGJXRm5aVzVsY3k4MFdWVTVNVEZ6VDFoemRWRS5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xNTYwLGhfMTU2MC9mb3JtYXQsd2VicCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=mEqSbjuueyOo9CYBs6oWoMbjCd3OVomyhaqrv1ARz6CCBlLsmbtdewNlC6sMlLSU9OnpfGy8uqgwq75pcMZvwAfkCuChtHApXrvBMxccNw27W9tqvKnl5~o45sKnFMjL3eSgXS~phdQrfMFStU~6NOzhcQp7neT5yYX5iTdD0GddrYzWCe-3VsGxQJF1n1fCC5mAnUFuadrscdjJ8xllib9nGrkLq9tmcDIDHLbsT3jYQAelyfeFee3KMSJdIRzS1FRzrxXu4Gba3iRg4~gsVmjS-D5mW9o14xu6nZ1cpgsrK-hPlci~pN5RiNTq8vJBzXYIr8q94OQgqZKtZUNitA__" alt="Programación tradicional vs IA" class="rounded-lg shadow-lg" style="height: 450px; width: auto; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  <a href="diapositiva8.html" class="absolute bottom-8 left-8 text-white text-2xl"><i class="fas fa-arrow-left"></i></a>
+    <a href="diapositiva10.html" class="absolute bottom-8 right-8 text-white text-2xl"><i class="fas fa-arrow-right"></i></a>
+
+    <script>
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+          window.location.href = 'diapositiva8.html';
+        } else if (event.key === 'ArrowRight') {
+          window.location.href = 'diapositiva10.html';
+        }
+      });
+    </script>
+  </body>
+</html>
